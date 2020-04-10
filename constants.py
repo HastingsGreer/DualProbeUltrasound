@@ -1,3 +1,3 @@
-volumes_path = "/media/data/hastings/converted_from_dicom/"
+volumes_path = "F:/converted_from_dicom_split/"
 
-annotations_path = "/media/data/hastings/ct-angledslice-align/train_set/"
+annotations_path = volumes_path + "annotations/"
