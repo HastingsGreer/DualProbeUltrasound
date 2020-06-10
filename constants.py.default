@@ -1,0 +1,15 @@
+volumes_path = "/media/data/hastings/converted_from_dicom/"
+
+annotations_path = volumes_path + "annotations/"
+
+
+#volumes_path file structure:
+#$volumes_path$/
+#-annotations/
+#--Pancreas_*axis*.pickle
+#-test/
+#--Pancreas_*.nrrd
+#-train/
+#--Pancreas_*.nrrd
+#-valid/
+#--Pancreas_*.nrrd

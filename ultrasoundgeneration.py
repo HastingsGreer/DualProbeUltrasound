@@ -3,7 +3,7 @@ import itk
 from constants import *
 import os
 import scipy.linalg
-
+print("whoop")
 
 train_volumes_path = volumes_path + "train/"
 test_volumes_path = volumes_path + "test/"
@@ -58,8 +58,8 @@ def slice_multiprobe(image, probe, origin, direction):
             pass#print(o, d)
         p = SliceParams(
             o, d,
-            width=100,
-            height=100)
+            width=100,  #mm
+            height=100) #mm
 
         x = spine_slice(image, p)
 
@@ -71,15 +71,14 @@ def slice_multiprobe(image, probe, origin, direction):
          
 
 class SliceParams:
-    def __init__(self, position, direction=np.identity(3), origin="center", width=100, height=100, px=128):
-        self.position=position
+    def __init__(self, origin, direction=np.identity(3), width=100, height=100, px=128):
         self.direction=direction
         self.origin=origin
         self.width=width
         self.height=height
         self.px=px
         
-        assert len(self.position) == 3
+        assert len(self.origin) == 3
         
 def spine_slice(image, params):
     """
@@ -90,8 +89,11 @@ def spine_slice(image, params):
     
     output_origin = [
             val + params.direction[j, 0] * -params.height / 2 + params.direction[j, 1] * -params.width / 2
-            for j, val in enumerate(params.position)
+            for j, val in enumerate(params.origin)
         ]
+    
+    #print(output_origin)
+    #print(output_spacing)
 
     return itk.resample_image_filter(
         image, 
@@ -108,16 +110,16 @@ def random_small_rotation(factor = 10):
     RR = np.real(np.dot(np.dot(J, np.diag(lam)**(1 / factor)), np.linalg.inv(J)))
     return RR
 
-def shitty_ultrasound(x):
-    y = x[0, :, :]
+def approx_ultrasound(y):
+    
 
     y = y + 1000
     y = abs(1 - y[:, 1:] / y[:, :-1])
 
     denominator = np.cumsum(y, axis=1) + .01
-    return np.maximum(-10, np.log(np.abs(y / 4**denominator + .0001 * np.random.randn(128, 127)) ))
+    return np.maximum(-10, np.log(np.abs(y / 4**denominator + .0001 * np.random.randn(128, 128)) ))
 
-def generate_sample(image, annotations):
+def generate_sample(image, annotations, evil_debug=False):
     slice_idx = np.random.randint(50, len(annotations[0]) - 50)
 
     direction = np.dot(random_small_rotation(), np.array([[0, 0, 1],
@@ -137,8 +139,8 @@ def generate_sample(image, annotations):
         plt.show()
 
 
-    movement_relative_to_image_1 = np.random.randn(3) * 5
-    rotation_relative_to_image_1 = random_small_rotation(factor=50)
+    movement_relative_to_image_1 = np.random.randn(3) * 10
+    rotation_relative_to_image_1 = random_small_rotation(factor=25)
 
     direction_2 = np.dot(direction, rotation_relative_to_image_1)
     origin_2 = origin + np.transpose(np.dot(direction, movement_relative_to_image_1.transpose()))
@@ -149,8 +151,12 @@ def generate_sample(image, annotations):
         plt.show()
         plt.imshow(d)
         plt.show()
+    
+    horror = {}
+    if evil_debug:
+        horror = {k:v for k, v in locals().items() if not k.startswith('__')}
         
-    return {"data": [a, b, c, d], "classes": [movement_relative_to_image_1, rotation_relative_to_image_1]}
+    return {"data": [a, b, c, d], "classes": [movement_relative_to_image_1, rotation_relative_to_image_1], "locals":horror}
 
 
 def generate_data(volume_path, names):
@@ -162,7 +168,35 @@ def generate_data(volume_path, names):
 
         
 
-        for _ in range(512):
+        for _ in range(128):
             res.append(generate_sample(image, annotations))
 
     return res
+
+import os
+def load_dataset(path, simulate_ultrasound=False):
+    dataset = generate_data(path, os.listdir(path))
+
+    data = []
+    classes = []
+    for elem in dataset:
+        if not simulate_ultrasound:
+            data_entry = np.array(np.stack(elem["data"], axis=-1), dtype=np.float32)
+            data_entry += 1000
+            data_entry /= 2000
+        else: 
+            data_entry = [approx_ultrasound(d) for d in elem["data"]]
+            data_entry = np.stack(data_entry, axis=-1) / 10 + 1
+            data_entry = np.nan_to_num(data_entry)
+            data_entry = np.clip(data_entry, -5, 5)
+
+        
+        data.append(data_entry)
+
+        class_entry = elem["classes"]
+        class_entry = np.concatenate([class_entry[0] / 4, class_entry[1].flatten() * 40])
+        class_entry[[3, 7, 11]] -= 40
+        classes.append(class_entry)
+    data = np.array(data)
+    classes = np.array(classes)
+    return data, classes
