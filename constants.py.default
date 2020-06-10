@@ -1,0 +1,3 @@
+volumes_path = "/media/data/hastings/converted_from_dicom/"
+
+annotations_path = volumes_path + "annotations/"
