@@ -110,7 +110,7 @@ def random_small_rotation(factor = 10):
     RR = np.real(np.dot(np.dot(J, np.diag(lam)**(1 / factor)), np.linalg.inv(J)))
     return RR
 
-def shitty_ultrasound(y):
+def approx_ultrasound(y):
     
 
     y = y + 1000
@@ -185,7 +185,7 @@ def load_dataset(path, simulate_ultrasound=False):
             data_entry += 1000
             data_entry /= 2000
         else: 
-            data_entry = [shitty_ultrasound(d) for d in elem["data"]]
+            data_entry = [approx_ultrasound(d) for d in elem["data"]]
             data_entry = np.stack(data_entry, axis=-1) / 10 + 1
             data_entry = np.nan_to_num(data_entry)
             data_entry = np.clip(data_entry, -5, 5)
