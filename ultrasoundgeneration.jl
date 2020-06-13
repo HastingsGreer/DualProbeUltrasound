@@ -55,7 +55,7 @@ end
 function generate_sample(jimage, annotation)
     initial_position_randomness_scale = 15 #mm
     movement_scale = 10 #mm
-    slice_idx = vals["slice_idx"]
+    slice_idx = rand(50:length(annotation[1]) - 50) #vals["slice_idx"]
 
     direction = random_small_rotation(15) * [0 0 1; -1 0 0; 0 -1 0]
 
@@ -80,11 +80,10 @@ function generate_sample(jimage, annotation)
     direction_2 = direction * rotation_relative_to_image_1
     origin_2 = origin .+ direction * movement_relative_to_image_1
 
-    c, d = slice_multiprobe(jimage, probe, origin, direction)
+    c, d = slice_multiprobe(jimage, probe, origin_2, direction_2)
 
     return Dict(["data"=> [a, b, c, d], "classes"=> [movement_relative_to_image_1, rotation_relative_to_image_1]])
 end
-
 
 
 function warp(dst, texture, origin::Vec3, direction::Mat3, image_direction::Mat3, image_spacing::Vec3)
