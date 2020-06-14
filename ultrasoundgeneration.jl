@@ -31,10 +31,12 @@ struct ItkImage
     texture::Any
     direction::Mat3
     spacing::Vec3
+    largestPossibleRegion::Vec3
     ItkImage(pyobject) = new(
         CuTexture(CuTextureArray(Float32.(np.array(pyobject)))), 
         Mat3(itk.array_from_matrix(pyobject.GetDirection())),
-        Vec3(np.array(pyobject.GetSpacing()))
+        Vec3(np.array(pyobject.GetSpacing())),
+        Vec3(np.array(pyobject.GetLargestPossibleRegion().GetSize()))
     )
 end
 
