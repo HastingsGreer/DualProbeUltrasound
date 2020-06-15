@@ -7,6 +7,7 @@ using StaticArrays
 using CuArrays, CUDAnative
 using CuArrays, CuTextures
 using NRRD
+using Rotations
 
 
 using LinearAlgebra
@@ -28,15 +29,28 @@ struct SliceParams #measured from center
 end
 
 struct ItkImage
-    texture::Any
+    array::Any
     direction::Mat3
     spacing::Vec3
     largestPossibleRegion::Vec3
     ItkImage(pyobject) = new(
-        CuTexture(CuTextureArray(Float32.(np.array(pyobject)))), 
+        np.array(pyobject), 
         Mat3(itk.array_from_matrix(pyobject.GetDirection())),
         Vec3(np.array(pyobject.GetSpacing())),
         Vec3(np.array(pyobject.GetLargestPossibleRegion().GetSize()))
+    )
+end
+
+struct GPUItkImage
+    texture::Any
+    direction::Mat3
+    spacing::Vec3
+    largestPossibleRegion::Vec3
+    GPUItkImage(object) = new(
+        CuTexture(CuTextureArray(Float32.(object.array))), 
+        object.direction,
+        object.spacing,
+        object.largestPossibleRegion
     )
 end
 
@@ -49,12 +63,22 @@ function get_origin_direction(probe::TwoSensorProbe, origin, direction, idx)
 end
 
 function random_small_rotation(factor)
-    R, _ = qr(randn((3, 3)))
-    lambda, J = eigen(R)
-    return real(J * Diagonal(lambda .^ (1 / factor)) * inv(J))
+    #R, _ = qr(randn((3, 3)))
+    #lambda, J = eigen(R)
+    #return real(J * Diagonal(lambda .^ (1 / factor)) * inv(J))
+    return RotXYZ(pi / factor .* randn(3)...)
 end
 
-function generate_sample(jimage, annotation)
+function generate_sample(jimage::ItkImage, annotation)
+    gimage= GPUItkImage(jimage)
+    
+    res = generate_sample(gimage, annotation)
+    
+    CuTextures.unsafe_free!(gimage.texture)
+    return res
+end
+
+function generate_sample(jimage::GPUItkImage, annotation)
     initial_position_randomness_scale = 15 #mm
     movement_scale = 10 #mm
     slice_idx = rand(50:length(annotation[1]) - 50) #vals["slice_idx"]
@@ -88,7 +112,7 @@ function generate_sample(jimage, annotation)
 end
 
 
-function warp(dst, texture, origin::Vec3, direction::Mat3, image_direction::Mat3, image_spacing::Vec3)
+function warp(dst, texture, origin::Vec3, direction::Mat3, image_direction::Mat3, image_spacing::Vec3, size::Vec3)
     i::Int32 = (blockIdx().x - 1) * blockDim().x + threadIdx().x
     j::Int32 = (blockIdx().y - 1) * blockDim().y + threadIdx().y
     #u = (Float32(i) - 1f0) / (Float32(size(dst, 1)) - 1f0)
@@ -104,7 +128,7 @@ function warp(dst, texture, origin::Vec3, direction::Mat3, image_direction::Mat3
     pixel_position = pixel_position ./ direction_flat
     
     
-    @inbounds dst[i,j] = texture(pixel_position[3] / 223, pixel_position[2] / 512, pixel_position[1] / 512)
+    @inbounds dst[i,j] = texture(pixel_position[3] / size[3], pixel_position[2] / size[2], pixel_position[1] / size[1])
     return nothing
 end
 
@@ -115,7 +139,8 @@ function spine_slice(image, params)
     
     outimg_d = CuArray{Float32}(undef, 128, 128)
     @cuda threads = (128, 1) blocks = (1, 128) warp(
-        outimg_d, image.texture, Vec3(output_origin), Mat3(output_direction), jimage.direction, jimage.spacing
+        outimg_d, image.texture, Vec3(output_origin), Mat3(output_direction), image.direction, image.spacing,
+        image.largestPossibleRegion
     )
     return Array(outimg_d)
 end
@@ -133,4 +158,45 @@ function slice_multiprobe(jimage, probe, origin, direction)
         push!(params_array, params)
     end
     return res
+end
+
+function generate_data(jimages, annotations)
+    res = []#::Array{Dict{String,Array{T,1} where T}, 1} = []
+    for(jimage, annotation) = zip(jimages, annotations)
+        gimage = GPUItkImage(jimage)
+        for(i) = 1:67
+            push!(res, generate_sample(gimage, annotation))
+            #push!(res, ultrasoundgeneration.generate_sample(
+            #        jimage, annotation))
+        end
+        CuTextures.unsafe_free!(gimage.texture)
+    end
+    print("i")
+    
+    data = [] #::Array{Array{Float32, 3}, 1} = []
+    classes = []
+    for elem = res
+        data_entry = cat(
+            [reshape(x, Val(3)) for x in elem["data"]]...;
+            dims=3
+        ).* 1.0f0
+        data_entry .+= 1000
+        data_entry ./= 2000
+        
+        push!(data, np.array(data_entry))
+        
+        c = elem["classes"] 
+        class_entry = vcat(c[1] ./ 4, 4 .* [c[2].theta1, c[2].theta2, c[2].theta3])
+        #class_entry[[4, 8, 12]] .-= 40
+        push!(classes, class_entry)
+    end
+    return data, classes
+end
+
+function longcat(data)
+    data2 = zeros(Float32, (length(data), size(data[1])...))
+    for i = 1:length(data)
+        data2[i, :, :, :] = data[i]
+    end
+    return data2
 end

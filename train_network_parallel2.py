@@ -12,16 +12,19 @@ data_dir = "prepped_data/train/"
 
 
 import tensorflow as tf
-config = tf.ConfigProto()
+#config = tf.ConfigProto()
  
 # Don't pre-allocate memory; allocate as-needed
-config.gpu_options.allow_growth = True
+#config.gpu_options.allow_growth = True
 
+import tensorflow as tf
+gpu_options = tf.GPUOptions(per_process_gpu_memory_fraction=0.7)
+sess = tf.Session(config=tf.ConfigProto(gpu_options=gpu_options))
 
 
 
 from tensorflow.keras import Sequential
-from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense, Dropout, Lambda, concatenate
+from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense, Dropout, Lambda, concatenate, BatchNormalization
 from tensorflow.keras.optimizers import Adam
 
 from tensorflow.keras.layers import Input
@@ -32,18 +35,25 @@ model.add(Conv2D(32, (3, 3), activation='relu',
                  input_shape=(128, 128, 2)
                  
                 ))
+model.add(BatchNormalization())
 
 model.add(MaxPooling2D(pool_size=(2, 2)))
 model.add(Conv2D(128, (3, 3), activation='relu'))
+model.add(BatchNormalization())
+
 
 model.add(MaxPooling2D(pool_size=(2, 2)))
 model.add(Conv2D(128, (3, 3), activation='relu'))
+model.add(BatchNormalization())
 model.add(MaxPooling2D(pool_size=(2, 2)))
 model.add(Conv2D(256, (3, 3), activation='relu'))
+model.add(BatchNormalization())
 #model.add(MaxPooling2D(pool_size=(2, 2)))              
 model.add(Conv2D(512, (3, 3), activation='relu'))
+model.add(BatchNormalization())
 model.add(Flatten())
 model.add(Dense(1024, activation='relu'))
+model.add(BatchNormalization())
 model.add(Dropout(.5))
 
 def slice_tensor(i):
@@ -60,7 +70,7 @@ y = concatenate([a, b])
 
 y = Dense(1024, activation='relu')(y)
 y = Dropout(.5)(y)
-y = Dense(12)(y)
+y = Dense(6)(y)
 
 model = keras.Model(x, y)
 model.summary()
@@ -81,7 +91,7 @@ tdata, tclasses = ultrasoundgeneration.load_dataset(ultrasoundgeneration.test_vo
 
 
 # In[13]:
-
+Array{Array{Float64,1},1}
 
 while True:
     data, classes = ultrasoundgeneration.load_dataset(ultrasoundgeneration.train_volumes_path)
