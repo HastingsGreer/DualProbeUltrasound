@@ -65,14 +65,16 @@ b = concatenate([slice_tensor(1)(x), slice_tensor(3)(x)], -1)
 a = model(a)
 b = model(b)
 
-y = concatenate([a, b])
+c = Input((3,))
+
+y = concatenate([a, b, c])
 
 
 y = Dense(1024, activation='relu')(y)
 #y = Dropout(.5)(y)
-y = Dense(6)(y)
+y = Dense(3)(y)
 
-model = keras.Model(x, y)
+model = keras.Model((x, c), y)
 model.summary()
 
 model.compile(loss=keras.losses.mean_squared_error,
