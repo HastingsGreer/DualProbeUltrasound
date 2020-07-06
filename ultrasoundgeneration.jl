@@ -78,19 +78,20 @@ function generate_sample(jimage::ItkImage, annotation)
     return res
 end
 
+const upright = [0 0 1; -1 0 0; 0 -1 0]
+
 function generate_sample(jimage::GPUItkImage, annotation)
     initial_position_randomness_scale = 15 #mm
     movement_scale = 10 #mm
     slice_idx = rand(50:length(annotation[1]) - 50) #vals["slice_idx"]
 
-    direction = random_small_rotation(15) * [0 0 1; -1 0 0; 0 -1 0]
-
-    #direction = vals["direction"]
+    direction = random_small_rotation(15) * upright
 
     # depends on annotation having 1 mm spacing along spine
     origin = (
-        [annotation[2][slice_idx], -annotation[1][slice_idx], -slice_idx] 
+        origin_by_height(annotation, slice_idx) 
         .+ initial_position_randomness_scale .* randn(Float64, 3) 
+        .+ 15 .* upright[:, 1]
     )
 
     #debug
@@ -115,10 +116,6 @@ end
 function warp(dst, texture, origin::Vec3, direction::Mat3, image_direction::Mat3, image_spacing::Vec3, size::Vec3)
     i::Int32 = (blockIdx().x - 1) * blockDim().x + threadIdx().x
     j::Int32 = (blockIdx().y - 1) * blockDim().y + threadIdx().y
-    #u = (Float32(i) - 1f0) / (Float32(size(dst, 1)) - 1f0)
-    #v = (Float32(j) - 1f0) / (Float32(size(dst, 2)) - 1f0)
-    #x = u  #+ 0.02f0 * CUDAnative.sin(30v)
-    #y = v #+ 0.03f0 * CUDAnative.sin(20u)
     
     pixel_position = origin .+ direction[:, 1] .* Float32(j) 
     pixel_position = pixel_position .+ direction[:, 2] .* Float32(i)
@@ -171,11 +168,52 @@ function generate_data(jimages, annotations)
         end
         CuTextures.unsafe_free!(gimage.texture)
     end
-    print("i")
+    return samples_to_dataset(res)
     
-    data = [] #::Array{Array{Float32, 3}, 1} = []
+    
+end
+
+function generate_sample_deterministic(jimage::ItkImage, origin1, origin2, direction1, direction2)
+    gimage= GPUItkImage(jimage)
+    
+    res = generate_sample_deterministic(gimage, origin1, origin2, direction1, direction2)
+    
+    CuTextures.unsafe_free!(gimage.texture)
+    return res
+end
+
+
+function generate_sample_deterministic(jimage::GPUItkImage, origin1, origin2, direction1, direction2)
+
+
+    probe = TwoSensorProbe(20, -np.pi / 4)
+
+    a, b = slice_multiprobe(jimage, probe, origin1, direction1)
+
+    rotation_relative_to_image_1 = inv(direction1) * direction2
+    
+    rotation_relative_to_image_1 = RotXYZ(rotation_relative_to_image_1)
+    
+    movement_relative_to_image_1 = inv(direction1) * (origin2 .- origin1)
+
+    #direction_2_test = direction1 * rotation_relative_to_image_1
+    #origin_2_test = origin1 .+ direction1 * movement_relative_to_image_1
+
+    c, d = slice_multiprobe(jimage, probe, origin2, direction2)
+
+    return Dict(["data"=> [a, b, c, d], "classes"=> [movement_relative_to_image_1, rotation_relative_to_image_1]])
+end
+function origin_by_height(annotation, slice_idx)
+    # depends on annotation having 1 mm spacing along spine
+    origin = (
+        [annotation[2][slice_idx], -annotation[1][slice_idx], -slice_idx] 
+    )
+    return origin
+end
+function samples_to_dataset(samples)
+    data = [] 
     classes = []
-    for elem = res
+    for elem = samples
         data_entry = cat(
             [reshape(x, Val(3)) for x in elem["data"]]...;
             dims=3
@@ -190,8 +228,8 @@ function generate_data(jimages, annotations)
         #class_entry[[4, 8, 12]] .-= 40
         push!(classes, class_entry)
     end
-    return data, classes
-end
+    return longcat(data), longcat(classes)
+end 
 
 function longcat(data)
     data2 = zeros(Float32, (length(data), size(data[1])...))

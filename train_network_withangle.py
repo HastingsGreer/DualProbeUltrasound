@@ -35,25 +35,25 @@ model.add(Conv2D(32, (3, 3), activation='relu',
                  input_shape=(128, 128, 2)
                  
                 ))
-model.add(BatchNormalization())
+model.add(BatchNormalization(momentum=.9))
 
 model.add(MaxPooling2D(pool_size=(2, 2)))
 model.add(Conv2D(128, (3, 3), activation='relu'))
-model.add(BatchNormalization())
+model.add(BatchNormalization(momentum=.9))
 
 
 model.add(MaxPooling2D(pool_size=(2, 2)))
 model.add(Conv2D(128, (3, 3), activation='relu'))
-model.add(BatchNormalization())
+model.add(BatchNormalization(momentum=.9))
 model.add(MaxPooling2D(pool_size=(2, 2)))
 model.add(Conv2D(256, (3, 3), activation='relu'))
-model.add(BatchNormalization())
+model.add(BatchNormalization(momentum=.9))
 #model.add(MaxPooling2D(pool_size=(2, 2)))              
 model.add(Conv2D(512, (3, 3), activation='relu'))
-model.add(BatchNormalization())
+model.add(BatchNormalization(momentum=.9))
 model.add(Flatten())
 model.add(Dense(1024, activation='relu'))
-model.add(BatchNormalization())
+model.add(BatchNormalization(momentum=.9))
 #model.add(Dropout(.5))
 
 def slice_tensor(i):
