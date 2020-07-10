@@ -1,0 +1,1102 @@
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 9s - loss: 2.1182 - val_loss: 17.2774
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 13s - loss: 1.6725 - val_loss: 18.5966
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 12s - loss: 1.4287 - val_loss: 17.2795
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.3600 - val_loss: 15.3997
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.4733 - val_loss: 15.9951
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.3401 - val_loss: 16.1492
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.3798 - val_loss: 13.6267
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.2814 - val_loss: 15.1552
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1769 - val_loss: 15.4711
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.2734 - val_loss: 14.9188
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.3899 - val_loss: 13.5842
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.2715 - val_loss: 10.5288
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.2605 - val_loss: 14.4375
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.2667 - val_loss: 13.9478
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1530 - val_loss: 14.6697
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.3750 - val_loss: 11.8475
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.2718 - val_loss: 12.8282
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.2347 - val_loss: 12.0852
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.2070 - val_loss: 11.6854
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1256 - val_loss: 12.6926
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1746 - val_loss: 12.8684
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.2516 - val_loss: 12.3278
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.2718 - val_loss: 13.1727
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1382 - val_loss: 13.1472
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.1557 - val_loss: 11.1722
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.2732 - val_loss: 11.5841
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.0827 - val_loss: 14.4454
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.2419 - val_loss: 12.9372
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1870 - val_loss: 12.8536
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.0998 - val_loss: 10.2117
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1033 - val_loss: 11.2305
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1283 - val_loss: 10.6522
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1555 - val_loss: 12.6930
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1086 - val_loss: 11.6236
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.0578 - val_loss: 10.7631
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1352 - val_loss: 11.5210
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1142 - val_loss: 12.3751
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1886 - val_loss: 11.8926
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1508 - val_loss: 11.6298
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.2010 - val_loss: 11.5054
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1612 - val_loss: 10.2077
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1272 - val_loss: 11.7859
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1925 - val_loss: 10.7300
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.0973 - val_loss: 12.6180
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1688 - val_loss: 10.1783
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.0869 - val_loss: 10.9204
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.0877 - val_loss: 10.7150
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.0873 - val_loss: 10.7857
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.0782 - val_loss: 10.6265
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1779 - val_loss: 11.9806
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1896 - val_loss: 9.6011
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1146 - val_loss: 10.4798
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1425 - val_loss: 9.5798
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1802 - val_loss: 10.1945
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1299 - val_loss: 11.0078
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.2247 - val_loss: 12.0561
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1419 - val_loss: 11.6165
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.2455 - val_loss: 11.9924
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1466 - val_loss: 14.2702
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.2167 - val_loss: 12.8569
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1274 - val_loss: 11.8104
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1774 - val_loss: 11.0922
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1225 - val_loss: 11.9584
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1298 - val_loss: 10.2305
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1211 - val_loss: 10.0846
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.0958 - val_loss: 11.3536
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1172 - val_loss: 12.3015
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1580 - val_loss: 11.3812
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.0137 - val_loss: 16.3232
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1661 - val_loss: 12.0945
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.2895 - val_loss: 11.1903
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.0822 - val_loss: 11.3567
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1295 - val_loss: 11.3605
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1469 - val_loss: 12.8953
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1482 - val_loss: 10.7555
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1843 - val_loss: 12.5687
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.2031 - val_loss: 12.6325
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.0836 - val_loss: 10.8041
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1473 - val_loss: 10.7496
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1498 - val_loss: 12.5749
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1773 - val_loss: 12.6602
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.0219 - val_loss: 13.2308
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1149 - val_loss: 13.0828
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1471 - val_loss: 14.3090
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1550 - val_loss: 14.0796
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1486 - val_loss: 15.1770
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1176 - val_loss: 12.5117
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1544 - val_loss: 11.2044
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1113 - val_loss: 11.5004
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.2224 - val_loss: 10.7002
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1007 - val_loss: 13.1556
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1099 - val_loss: 11.8378
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.0934 - val_loss: 11.3283
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.0392 - val_loss: 11.6297
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.0768 - val_loss: 10.6280
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1308 - val_loss: 11.0572
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.0604 - val_loss: 10.6184
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1520 - val_loss: 10.7314
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1178 - val_loss: 9.5824
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1773 - val_loss: 10.2131
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1226 - val_loss: 9.5583
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1664 - val_loss: 9.2982
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.0912 - val_loss: 8.5667
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1170 - val_loss: 8.9390
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 0.9972 - val_loss: 9.7062
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.0547 - val_loss: 9.9375
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1231 - val_loss: 10.3865
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.0693 - val_loss: 11.1415
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1752 - val_loss: 7.7505
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1705 - val_loss: 8.7904
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1359 - val_loss: 9.0099
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1956 - val_loss: 8.0320
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.2013 - val_loss: 9.2881
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1330 - val_loss: 8.9153
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1086 - val_loss: 9.8506
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.2365 - val_loss: 8.5779
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.0272 - val_loss: 10.3327
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.0361 - val_loss: 11.3378
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1380 - val_loss: 11.7569
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.0696 - val_loss: 12.6095
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1212 - val_loss: 9.8709
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.0804 - val_loss: 11.4672
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.0628 - val_loss: 9.6790
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.0820 - val_loss: 10.4834
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1487 - val_loss: 10.8050
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1606 - val_loss: 11.2913
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1220 - val_loss: 10.5998
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1796 - val_loss: 13.2879
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.0881 - val_loss: 10.4596
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.1096 - val_loss: 11.5330
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1385 - val_loss: 11.8486
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1148 - val_loss: 10.5991
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.0529 - val_loss: 9.4999
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.0973 - val_loss: 10.1926
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.0847 - val_loss: 8.6150
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.0278 - val_loss: 10.6667
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1558 - val_loss: 10.6965
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1189 - val_loss: 12.7897
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1388 - val_loss: 8.4840
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1947 - val_loss: 9.0614
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.0400 - val_loss: 9.2657
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1365 - val_loss: 8.9997
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 0.9683 - val_loss: 8.6486
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1043 - val_loss: 8.8812
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1304 - val_loss: 10.7393
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1403 - val_loss: 12.8834
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1546 - val_loss: 10.7987
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.0208 - val_loss: 9.6491
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1088 - val_loss: 12.3138
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.0161 - val_loss: 9.7042
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1030 - val_loss: 11.2702
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1273 - val_loss: 10.0593
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.0578 - val_loss: 13.4094
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.2153 - val_loss: 10.1756
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.0703 - val_loss: 12.2901
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.0791 - val_loss: 9.8846
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1226 - val_loss: 8.9954
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.0340 - val_loss: 9.2856
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.0730 - val_loss: 13.2961
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.0594 - val_loss: 10.3116
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.0809 - val_loss: 11.7228
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.0754 - val_loss: 10.3143
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1164 - val_loss: 11.9953
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1109 - val_loss: 11.1406
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.0176 - val_loss: 9.2962
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.1157 - val_loss: 9.3164
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.0079 - val_loss: 9.5720
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.1559 - val_loss: 10.2289
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1377 - val_loss: 9.6573
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.0017 - val_loss: 10.2373
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1351 - val_loss: 12.6322
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1703 - val_loss: 10.3135
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.0802 - val_loss: 13.6326
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.0279 - val_loss: 9.1275
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.0418 - val_loss: 9.9548
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1391 - val_loss: 8.9189
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.0605 - val_loss: 10.2166
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.0044 - val_loss: 9.0118
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.1272 - val_loss: 10.5425
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.0431 - val_loss: 10.6344
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1346 - val_loss: 10.1336
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.0321 - val_loss: 10.2419
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.1593 - val_loss: 10.0386
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1189 - val_loss: 12.0340
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.0816 - val_loss: 11.5999
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.1102 - val_loss: 12.0775
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1196 - val_loss: 11.0516
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.0789 - val_loss: 12.2587
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.1359 - val_loss: 12.4410
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.1307 - val_loss: 11.2295
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 0.9682 - val_loss: 10.6485
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.0068 - val_loss: 9.7991
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.0879 - val_loss: 10.0257
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.1351 - val_loss: 9.9812
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.1229 - val_loss: 8.9270
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.0995 - val_loss: 9.2769
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.0043 - val_loss: 8.8776
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.0765 - val_loss: 8.2714
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.0394 - val_loss: 8.6910
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.0164 - val_loss: 9.6681
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.0522 - val_loss: 8.1053
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 0.9764 - val_loss: 8.4997
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.0278 - val_loss: 7.7024
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.0726 - val_loss: 8.2913
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.0433 - val_loss: 8.6532
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 0.9970 - val_loss: 9.6838
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.1747 - val_loss: 8.4566
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 0.9857 - val_loss: 8.5089
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.0084 - val_loss: 8.8523
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.0733 - val_loss: 9.7827
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.1596 - val_loss: 8.0290
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.0861 - val_loss: 7.2295
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.0330 - val_loss: 9.9545
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.0231 - val_loss: 9.3842
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.1273 - val_loss: 9.5798
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.0417 - val_loss: 7.9153
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.0606 - val_loss: 9.1412
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 0.9161 - val_loss: 8.3778
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.0054 - val_loss: 10.1929
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.0310 - val_loss: 9.0601
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.0334 - val_loss: 8.6895
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.0513 - val_loss: 8.9265
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.0338 - val_loss: 10.4813
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 0.9989 - val_loss: 10.6209
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.0405 - val_loss: 10.5853
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.0426 - val_loss: 9.5139
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.1580 - val_loss: 11.3756
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.1293 - val_loss: 10.5487
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.0540 - val_loss: 12.2687
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.0487 - val_loss: 10.2665
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.0691 - val_loss: 9.1202
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.1120 - val_loss: 10.2266
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 0.9446 - val_loss: 9.6495
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.1197 - val_loss: 10.2291
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.0792 - val_loss: 12.4729
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.1212 - val_loss: 10.3774
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.0763 - val_loss: 11.2363
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.0749 - val_loss: 12.3254
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.1285 - val_loss: 10.1933
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 0.9854 - val_loss: 11.5279
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.1343 - val_loss: 9.5433
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.0787 - val_loss: 9.8407
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.0791 - val_loss: 11.5681
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 0.9713 - val_loss: 15.6474
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 0.9974 - val_loss: 12.3752
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 0.9598 - val_loss: 11.7574
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 0.9709 - val_loss: 10.4239
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.0343 - val_loss: 11.9590
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.1381 - val_loss: 11.2376
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.0307 - val_loss: 11.4544
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.0885 - val_loss: 11.8223
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.0008 - val_loss: 13.0167
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.0542 - val_loss: 11.7243
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.0350 - val_loss: 12.7161
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.0840 - val_loss: 13.7513
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.1045 - val_loss: 13.3930
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.0395 - val_loss: 14.4475
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.0996 - val_loss: 16.0187
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 0.9830 - val_loss: 11.1758
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.1481 - val_loss: 12.2393
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.0868 - val_loss: 13.3435
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.1862 - val_loss: 11.0602
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.2191 - val_loss: 13.6283
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.0740 - val_loss: 11.8470
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.0852 - val_loss: 12.9229
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.0975 - val_loss: 11.8031
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.0045 - val_loss: 11.6615
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 8s - loss: 1.0687 - val_loss: 10.9742
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1305 - val_loss: 15.7152
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1327 - val_loss: 14.0670
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.0887 - val_loss: 10.4764
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.1000 - val_loss: 15.6513
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.0562 - val_loss: 9.8359
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 0.9852 - val_loss: 13.4762
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
+ - 7s - loss: 1.0577 - val_loss: 12.8329
+
+Train on 2010 samples, validate on 536 samples
+Epoch 1/1
